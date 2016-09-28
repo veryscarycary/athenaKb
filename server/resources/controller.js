@@ -16,13 +16,14 @@ module.exports = {
   },
   getArticle(req, res) {
     let id = req.params.id;
-    Kb.find(id ? {_id: req.params.id} : {},
+    Kb.find(id ? {id: req.params.id} : {},
       (err, data) => err ?
         res.status(404).send(err)
         : res.status(200).send(JSON.stringify(data))
     );
   },
   createArticle(req, res) {
+    console.log(req.body);
     new Kb(req.body)
       .save((err, data) => err ?
         res.status(500).send(err)
