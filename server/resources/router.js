@@ -2,8 +2,6 @@
 const router = require('../config/middleware.js').router();
 const api = require('./controller.js');
 
-// router.get('/api/:id/stub', api.getStubs); //return stubs. this will be how the kb search service updates
-
 router.route('/api')
   .get(api.getArticle)
   .post(api.createArticle);

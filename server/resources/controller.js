@@ -11,9 +11,6 @@ module.exports = {
       : res.status(503).send(JSON.stringify({name: 'MONGO_CONN_FAIL', message: 'bad MongoDB connection'}
       ));
   },
-  getStubs(req, res) {
-    //return stubs. this will be how the kb search service updates
-  },
   getArticle(req, res) {
     console.log('made it to getArticle');
     let id = req.params.id;
