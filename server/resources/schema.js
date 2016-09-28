@@ -12,12 +12,12 @@ module.exports = mongoose.model('Kb', new mongoose.Schema(
       issue: String,
       solution: String,
       relatedTickets: [String],
-      relatedProducts: Object, //keys are products, values are versions
+      relatedProducts: [String], //Keys for product and versions
       authorId: String,
       archived: Boolean,
-      datesEdited: [[Date, String]], //dates edited, user Id
-      dateSubmitted: Date,
-      dateLastViewed: Date,
+      datesEdited: [[String, String]], //dates edited, user Id
+      dateSubmitted: String,
+      dateLastViewed: String,
       viewCount: Number,
       checkedOut: Boolean
     },
