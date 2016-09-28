@@ -7,7 +7,8 @@ module.exports = mongoose.model('Kb', new mongoose.Schema(
         type:String,
         unique: true
       },
-      issuePreview: String, 
+      id: String,
+      issuePreview: String,
       issue: String,
       solution: String,
       relatedTickets: [String],
@@ -17,7 +18,7 @@ module.exports = mongoose.model('Kb', new mongoose.Schema(
       datesEdited: [[Date, String]], //dates edited, user Id
       dateSubmitted: Date,
       dateLastViewed: Date,
-      viewCount: Number, 
+      viewCount: Number,
       checkedOut: Boolean
     },
     {  versionKey: false }
