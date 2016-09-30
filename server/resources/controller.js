@@ -15,6 +15,7 @@ module.exports = {
     //return stubs. this will be how the kb search service updates
   },
   getArticle(req, res) {
+    console.log('made it to getArticle');
     let id = req.params.id;
     Kb.find(id ? {id: req.params.id} : {},
       (err, data) => err ?
@@ -23,7 +24,6 @@ module.exports = {
     );
   },
   createArticle(req, res) {
-    console.log(req.body);
     new Kb(req.body)
       .save((err, data) => err ?
         res.status(500).send(err)
