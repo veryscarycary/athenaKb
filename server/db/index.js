@@ -25,7 +25,6 @@ module.exports = mw.mongoose.connect(uri, {
       .forEach((record, index, arr) => new require('../resources/schema.js')(record)
         .save(err => {
           if (err) {
-            console.log(err);
             err.message.match(/^E11000/i) ? conflictCount++ : errMsg.push(err.message);
           }
           doneCount++;
