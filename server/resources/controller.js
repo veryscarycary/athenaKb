@@ -23,6 +23,22 @@ module.exports = {
         : res.status(200).send(JSON.stringify(data))
     );
   },
+  getArticlesByIds(req, res) {
+    let ids = req.body.ids;
+    Promise.all(ids.map(item => {
+      return Kb.find({id: item})
+        .then(result => {
+              return result;
+        })
+    }))
+      .then(arr => {
+        res.status(200).send(arr)
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(404).send(err);
+      })
+  },
   createArticle(req, res) {
     new Kb(req.body)
       .save((err, data) => err ?
