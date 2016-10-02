@@ -25,7 +25,8 @@ module.exports = {
   },
   getArticlesByIds(req, res) {
     let ids = req.body.ids;
-    Promise.all(ids.map(item => {
+    console.log(ids, 'IDS INCOMING TO KBSERVER');
+    return Promise.all(ids.map(item => {
       return Kb.find({id: item})
         .then(result => {
           return result[0];
