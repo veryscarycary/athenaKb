@@ -4,6 +4,8 @@ const request = mw.request;
 const url = mw.urls.database;
 const Kb = require('./schema.js');
 
+let id = 6;
+
 module.exports = {
   pingDb (req, res) {
     require('../db/index.js').readyState ?
@@ -25,7 +27,6 @@ module.exports = {
   },
   getArticlesByIds(req, res) {
     let ids = req.body.ids;
-    console.log(ids, 'IDS INCOMING TO KBSERVER');
     return Promise.all(ids.map(item => {
       return Kb.find({id: item})
         .then(result => {
@@ -41,14 +42,18 @@ module.exports = {
       })
   },
   createArticle(req, res) {
-    new Kb(req.body)
+    var article = req.body;
+    article.id = '0' + id;
+    article.dateSubmitted = new Date().toISOString();
+    id++;
+    new Kb(article)
       .save((err, data) => err ?
         res.status(500).send(err)
         : res.status(201).send(JSON.stringify(data))
       );
   },
   editArticle(req, res) {
-    Kb.findOneAndUpdate({_id: req.params.id},
+    Kb.findOneAndUpdate({id: req.params.id},
       req.body,
       {new: true},
       (err, data) => err ?
