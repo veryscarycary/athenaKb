@@ -9,8 +9,8 @@ module.exports = {
   mongoose: mongoose,
   bodyParser: require('body-parser'),
   chalk: require('chalk'),
-  request: require('request')//,
-  // sequelize: require('sequelize'), 
-  // pg: require('pg'),
-  // dbAuth: require('./dbAuth.js'),
+  request: require('request'),
+  sequelize: require('sequelize'), 
+  pg: require('pg'),
+  dbAuth: require('./dbAuth.js'),
 }
