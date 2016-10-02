@@ -28,11 +28,11 @@ module.exports = {
     Promise.all(ids.map(item => {
       return Kb.find({id: item})
         .then(result => {
-              return result;
+          return result[0];
         })
     }))
       .then(arr => {
-        res.status(200).send(arr)
+        res.status(200).send(JSON.stringify(arr))
       })
       .catch(err => {
         console.log(err);
