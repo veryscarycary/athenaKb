@@ -53,7 +53,10 @@ module.exports = {
       );
   },
   editArticle(req, res) {
-    Kb.findOneAndUpdate({id: req.params.id},
+    var article = req.body;
+    var userId = req.body.userId || '001';
+    article.datesEdited = [new Date().toISOString(), userId];
+    Kb.findOneAndUpdate({id: article.id},
       req.body,
       {new: true},
       (err, data) => err ?
