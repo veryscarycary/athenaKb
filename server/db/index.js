@@ -2,42 +2,38 @@
 const mw = require('../config/middleware.js');
 const uri = mw.urls.database;
 const chalk = mw.chalk;
+const schema = require('./schema.js');
+const DEFAULT_DATA = require('../data/test.json');
 
-module.exports = mw.mongoose.connect(uri, {
-  db: {native_parser: true},
-  server: {
-    poolSize: 5,
-    socketOptions: {
-      keepAlive: 1000,
-      connectTimeoutMS: 30000
+let sequelize = module.exports.sequelize = new mw.Sequelize(uri, {
+  logging: false //set true to see SQL in terminal
+});
+
+let Article = module.exports.article = 
+  sequelize.define('article', schema.article);
+
+//----server initialization----
+//server will overwrite defaults each time its launched
+sequelize.authenticate()
+  .then(() => {
+    let updates = 0,
+    inserts = 0,
+    errors = 0,
+    done = 0;
+    function loadCheck (a, err, inserted) {
+      err ? 
+        errors++ 
+        : inserted ? 
+          inserts++
+          : updates++;
+      ++done == a.length && console.log(chalk.green(`Load complete.`) + chalk.magenta(` ${done - errors} records loaded: ${inserts} insert${inserts != 1 ? 's' : ''}, ${updates} update${updates != 1 ? 's' : ''}.`) + (errors ? chalk.red(`\n${errors} error${errors != 1 ? 's' : ''}.`) : ''));
     }
-  }
-}).connection
-  .on('error', err => console.log(err))
-  .on('open', () => {
-    console.log(
-      '  ' + chalk.green.bold(String.fromCharCode(0x27A0)) + ' ' +
-      chalk.cyan('Connected to ' + uri),
-      '\n    ' + chalk.magenta.underline.dim('Loading Default Data...')
+    console.log(chalk.green('Database connected.') + chalk.cyan('\nLoading default data...'));
+    Article.sync()
+    .then(()=> DEFAULT_DATA.forEach((jsonItem, i, a) => 
+      Article.upsert(jsonItem)
+        .then(inserted => loadCheck(a, null, inserted))
+        .catch(err => loadCheck(a, err)))
     );
-    let conflictCount = 0, errMsg = [], doneCount = 0;
-    require('../data/default.json')
-      .forEach((record, index, arr) => new require('../resources/schema.js')(record)
-        .save(err => {
-          if (err) {
-            err.message.match(/^E11000/i) ? conflictCount++ : errMsg.push(err.message);
-          }
-          doneCount++;
-          doneCount == arr.length && console.log(
-            `    ${chalk.cyan.dim('Load Complete.')} ${chalk.yellow.dim(`(${(
-                  conflictCount ?
-                    `${conflictCount} conflicts`
-                    : '')}${
-                   (errMsg.length > 0 ?
-                    `${(conflictCount ? '; ' : '') + errMsg.length} errors: ${errMsg}`
-                    : '')
-                  })`)
-                }\n`
-          );
-      }));
-  });
+  })
+  .catch(err => console.log(chalk.red(err.name + ' ' + err.message)));

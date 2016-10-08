@@ -1,64 +1,40 @@
 'use strict'
-const mw = require('../config/middleware.js');
-const request = mw.request;
-const url = mw.urls.database;
-const Kb = require('./schema.js');
+const db = require('../db/index.js')
+const sequelize = db.sequelize;
+const Article = db.article;
 
 module.exports = {
   pingDb (req, res) {
-    require('../db/index.js').readyState ?
-      res.status(200).send(JSON.stringify('db connected'))
-      : res.status(503).send(JSON.stringify({name: 'MONGO_CONN_FAIL', message: 'bad MongoDB connection'}
-      ));
+    sequelize.authenticate()
+    .then(() => res.status(200).send(JSON.stringify('db connected')))
+    .catch(err => res.status(503).send(JSON.stringify({name: 'PGSQL_CONN_FAIL', message: 'bad PostgreSQL connection'})));
   },
   getArticle(req, res) {
-    console.log('made it to getArticle');
-    let id = req.params.id;
-    Kb.find(id ? {id: req.params.id} : {},
-      (err, data) => err ?
-        res.status(404).send(err)
-        : res.status(200).send(JSON.stringify(data))
-    );
-  },
-  getArticlesByIds(req, res) {
-    let ids = req.body.ids;
-    console.log(ids, 'IDS INCOMING TO KBSERVER');
-    return Promise.all(ids.map(item => {
-      return Kb.find({id: item})
-        .then(result => {
-          return result[0];
-        })
-    }))
-      .then(arr => {
-        console.log(arr, 'array from KB server')
-        res.status(200).send(JSON.stringify(arr))
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(404).send(err);
-      })
+    let id = req.params.id ;
+    let options = id ? 
+      { where: { id: { $any: id.split(',').map(str => +str) }}} 
+      : {};
+    Article.findAll(options)
+    .then(data => res.status(200).send(JSON.stringify(data)))
+    .catch(err => res.status(404).send(err));
   },
   createArticle(req, res) {
-    new Kb(req.body)
-      .save((err, data) => err ?
-        res.status(500).send(err)
-        : res.status(201).send(JSON.stringify(data))
-      );
+    Article.create(req.body)
+    .then(data => res.status(201).send(JSON.stringify(data)))
+    .catch(err => res.status(500).send(err));
   },
   editArticle(req, res) {
-    Kb.findOneAndUpdate({_id: req.params.id},
-      req.body,
-      {new: true},
-      (err, data) => err ?
-        res.status(404).send(err)
-        : res.status(200).send(JSON.stringify(data))
-    );
+    let options = {where: {id: req.params.id} };
+    Article.update(req.body, {where: {id: req.params.id} })
+    .then(() => Article.find(options)
+      .then(data => res.status(201).send(JSON.stringify(data))))
+    .catch(err => res.status(500).send(err));
   },
   deleteArticle(req, res) {
-    Kb.remove({_id: req.params.id},
-      (err, data) => err ?
-        res.status(404).send(err)
-        : res.status(200).send(JSON.stringify(data))
-    );
+    Article.destroy({where: {id: req.params.id} })
+    .then(deleted => deleted ? 
+      res.status(201).send('record deleted')
+      : res.status(404).send('no record found'))
+    .catch(err => res.status(500).send(err));
   }
 };
