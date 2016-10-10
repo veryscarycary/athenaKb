@@ -25,10 +25,7 @@ module.exports = {
     //relatedTickets: handle in join table
     //relatedProducts: handle in join table , //Keys for product and versions
     authorId: STR,
-    status: {
-      type: ENUM,
-      values: ['active', 'checked out', 'archived']
-    },
+    archived: BOOL,
     //datesEdited: [[String, String]], //dates edited, user Id HANDLE IN VER HISTORY
     dateLastViewed: DATE,
     viewCount: INT

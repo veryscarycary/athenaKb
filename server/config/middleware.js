@@ -9,6 +9,6 @@ module.exports = {
   Sequelize: require('sequelize'),
   bodyParser: require('body-parser'),
   chalk: require('chalk'),
-  sequelize: require('sequelize'), 
+  sequelize: require('sequelize'),
   pg: require('pg')
 }

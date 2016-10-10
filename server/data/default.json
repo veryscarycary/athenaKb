@@ -1,181 +1,57 @@
 [
   {
     "id": "01",
-    "checkedOut": true,
     "archived": true,
     "viewCount": 29,
-    "relatedProducts": [
-      "javascript",
-      "programming"
-    ],
-    "relatedTickets": [
-      "01",
-      "04"
-    ],
     "issuePreview": "How would you explain JavaScript closures?",
     "issue": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
     "solution": "Closures are a somewhat advanced, and often misunderstood feature of the JavaScript language. Simply put, closures are objects that contain a function and a reference to the environment in which the function was created. However, in order to fully understand closures, there are two other features of the JavaScript language that must first be understood―first-class functions and inner functions. First-Class Functions In programming languages, functions are considered to be first-class citizens if they can be manipulated like any other data type. For example, first-class functions can be constructed at runtime and assigned to variables. They can also be passed to, and returned by other functions. In addition to meeting the previously mentioned criteria, JavaScript functions also have their own properties and methods. The following example shows some of the capabilities of first-class functions. In the example, two functions are created and assigned to the variables 'foo' and 'bar'. The function stored in 'foo' displays a dialog box, while 'bar' simply returns whatever argument is passed to it. The last line of the example does several things. First, the function stored in 'bar' is called with 'foo' as its argument. 'bar' then returns the 'foo' function reference. Finally, the returned 'foo' reference is called, causing 'Hello World!' to be displayed.",
     "authorId": "01",
     "title": "How do JavaScript closures work?",
-    "datesEdited": [
-      [
-        "2015-05-15T08:26:01",
-        "01"
-      ],
-      [
-        "2015-05-20T08:26:01",
-        "01"
-      ],
-      [
-        "2015-05-21T08:26:01",
-        "02"
-      ],
-      [
-        "2016-01-12T08:26:01",
-        "01"
-      ],
-      [
-        "2016-09-30T03:14:24",
-        "02"
-      ]
-    ],
-    "dateSubmitted": "2015-03-02T12:52:25",
     "dateLastViewed": "2016-10-01T11:59:50"
   },
   {
     "id": "02",
-    "checkedOut": true,
     "archived": false,
     "viewCount": 16,
-    "relatedProducts": [
-      "macbook pro 13.3"
-    ],
-    "relatedTickets": [
-      "03"
-    ],
     "issuePreview": "I have a Macbook Pro 13.3 only a few months old. When I use this, whether I use the word, web surfing etc then adjust the brightness of the screen itself from strong to weak and back",
     "issue": "I have a Macbook Pro 13.3 only a few months old. When I use this, whether I use the word, web surfing etc then adjust the brightness of the screen itself from strong to weak and back, all the time. This happens both when connected power and do not. And no, it's not that it goes into power saving mode, this occurs during use. is there anyone who has experienced this or know what the problem might be?",
     "solution": "You can turn off the automatic response to changing ambient lighting as OGLETHORPE suggests if that is what you are talking about...or there is another function of dimming that occurs during idle time to conserve power...that action seems to occur in shorter times when on battery vs line power.  What you are seeing is not indicative of a faulty computer but the way the system is designed to be more useful to a 'generic' person.  As an individual you may want to make tweaks to the settings to match your user preferences.",
     "authorId": "02",
     "title": "The brightness adjusts itself during use",
-    "datesEdited": [
-      [
-        "2014-12-23T12:07:48",
-        "04"
-      ],
-      [
-        "2015-03-23T12:07:48",
-        "02"
-      ]
-    ],
-    "dateSubmitted": "2014-03-07T02:52:59",
     "dateLastViewed": "2015-08-08T09:54:52"
   },
   {
     "id": "03",
-    "checkedOut": false,
     "archived": false,
     "viewCount": 26,
-    "relatedProducts": [
-      "git"
-    ],
-    "relatedTickets": [
-      "05",
-      "03",
-      "02"
-    ],
     "issuePreview": "I committed the wrong files to Git. How can I undo this commit?",
     "issue": "I committed the wrong files to Git. How can I undo this commit?",
     "solution": "This is what you want to undo. This leaves your working tree the state of your files on disk unchanged but undoes the commit and leaves the changes you committed unstaged (so they'll appear as 'Changes not staged for commit' in git status and you'll need to add them again before committing). If you only want to add more changes to the previous commit, or change the commit message1, you could use git reset --soft HEAD~ instead, which is like git reset HEAD~ but leaves your existing changes staged. Make corrections to working tree files. git add anything that you want to include in your new commit. Commit the changes, reusing the old commit message. reset copied the old head to .git/ORIG_HEAD; commit with -c ORIG_HEAD will open an editor, which initially contains the log message from the old commit and allows you to edit it. If you do not need to edit the message, you could use the -C option.",
     "authorId": "01",
     "title": "How to undo last commit(s) in Git?",
-    "datesEdited": [
-      [
-        "2016-08-11T02:31:30",
-        "01"
-      ],
-      [
-        "2016-08-12T02:31:30",
-        "06"
-      ],
-      [
-        "2016-08-25T02:31:30",
-        "03"
-      ],
-      [
-        "2016-09-15T02:31:30",
-        "01"
-      ],
-      [
-        "2016-09-25T02:31:30",
-        "06"
-      ]
-    ],
-    "dateSubmitted": "2016-08-07T12:17:58",
     "dateLastViewed": "2016-09-29T06:09:20"
   },
   {
     "id": "04",
-    "checkedOut": false,
     "archived": false,
     "viewCount": 3,
-    "relatedProducts": [
-      "javascript"
-    ],
-    "relatedTickets": [
-      "04",
-      "05"
-    ],
     "issuePreview": "What does “use strict” do in JavaScript, and what is the reasoning behind it?",
     "issue": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error: Problem at line 1 character 1: Missing 'use strict' statement. Doing some searching, I realized that some people add 'use strict'; into their JavaScript code. Once I added the statement, the error stopped appearing. Unfortunately, Google did not reveal much of the history behind this string statement. Certainly it must have something to do with how the JavaScript is interpreted by the browser, but I have no idea what the effect would be. So what is 'use strict'; all about, what does it imply, and is it still relevant? Do any of the current browsers respond to the 'use strict'; string or is it for future use?",
     "solution": "The JavaScript strict mode is a feature in ECMAScript 5. You can enable the strict mode by declaring this in the top of your script/function. 'use strict'; When a JavaScript engine sees this directive, it will start to interpret the code in a special mode. In this mode, errors are thrown up when certain coding practices that could end up being potential bugs are detected (which is the reasoning behind the strict mode). Consider this example: var a = 365; var b = 030; In their obsession to line up the numeric literals, the developer has inadvertently initialized variable b with an octal literal. Non-strict mode will interpret this as a numeric literal with value 24 (in base 10). However, strict mode will throw an error. For a non-exhaustive list of specialties in strict mode, see this answer. Where should I use 'use strict';? In my existing JavaScript code: Probably not! If your existing JavaScript code has statements that are prohibited in strict-mode, the application will simply break. If you want strict mode, you should be prepared to debug and correct your existing code. This is why using 'use strict'; does not suddenly make your code better. In my new JavaScript application: Absolutely! Strict mode can be used as a whistleblower when you are doing something stupid with your code.",
     "authorId": "03",
     "title": "What does “use strict” do in JavaScript",
-    "datesEdited": [
-      [
-        "2016-08-09T09:17:07",
-        "03"
-      ],
-      [
-        "2016-08-19T09:17:07",
-        "03"
-      ],
-      [
-        "2016-08-22T09:17:07",
-        "04"
-      ],
-      [
-        "2016-08-25T09:17:07",
-        "01"
-      ]
-    ],
-    "dateSubmitted": "2016-08-01T10:48:38",
     "dateLastViewed": "2016-09-30T06:32:13"
   },
   {
     "id": "05",
-    "checkedOut": false,
     "archived": false,
     "viewCount": 82,
-    "relatedProducts": [
-      "javascript"
-    ],
-    "relatedTickets": [
-      "01",
-      "05"
-    ],
     "issuePreview": "Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. Where and what are they (physically in a real computer's memory)?",
     "issue": "Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. I haven't read a clear explanation of this. I understand what a stack is, but where and what are they (physically in a real computer's memory)? To what extent are they controlled by the OS or language runtime? What is their scope? What determines the size of each of them? What makes one faster?",
     "solution": "The stack is the memory set aside as scratch space for a thread of execution. When a function is called, a block is reserved on the top of the stack for local variables and some bookkeeping data. When that function returns, the block becomes unused and can be used the next time a function is called. The stack is always reserved in a LIFO (last in first out) order; the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the stack; freeing a block from the stack is nothing more than adjusting one pointer. The heap is memory set aside for dynamic allocation. Unlike the stack, there's no enforced pattern to the allocation and deallocation of blocks from the heap; you can allocate a block at any time and free it at any time. This makes it much more complex to keep track of which parts of the heap are allocated or free at any given time; there are many custom heap allocators available to tune heap performance for different usage patterns. Each thread gets a stack, while there's typically only one heap for the application (although it isn't uncommon to have multiple heaps for different types of allocation).",
     "authorId": "04",
     "title": "What and where are the stack and heap?",
-    "datesEdited": [
-      [
-        "2016-07-08T04:56:53",
-        "05"
-      ]
-    ],
-    "dateSubmitted": "2016-06-01T06:36:59",
     "dateLastViewed": "2016-10-03T01:53:50"
   }
 ]

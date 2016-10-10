@@ -11,8 +11,8 @@ module.exports = {
   },
   getArticle(req, res) {
     var id = req.params.id ;
-    var options = id ? 
-      { where: { id: { $any: id.split(',').map(str => +str) }}} 
+    var options = id ?
+      { where: { id: { $any: id.split(',').map(str => +str) }}}
       : {};
     Article.findAll(options)
     .then(data => res.status(200).send(JSON.stringify(data)))
@@ -32,7 +32,7 @@ module.exports = {
   },
   deleteArticle(req, res) {
     Article.destroy({where: {id: req.params.id} })
-    .then(deleted => deleted ? 
+    .then(deleted => deleted ?
       res.status(201).send('record deleted')
       : res.status(404).send('no record found'))
     .catch(err => res.status(500).send(err));
