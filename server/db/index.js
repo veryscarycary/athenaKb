@@ -5,7 +5,7 @@ const chalk = mw.chalk;
 const schema = require('./schema.js');
 const DEFAULT_DATA = require('../data/test.json');
 
-let sequelize = module.exports.sequelize = new mw.Sequelize(uri, {
+let sequelize = module.exports.sequelize = new mw.sequelize(uri, {
   logging: false //set true to see SQL in terminal
 });
 
