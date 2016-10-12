@@ -9,31 +9,37 @@ let sequelize = module.exports.sequelize = new mw.Sequelize(uri, {
   logging: false //set true to see SQL in terminal
 });
 
+//table definitions
 let Article = module.exports.article = 
   sequelize.define('article', schema.article);
-
+let RelatedTicket = module.exports.relatedTicket = 
+  sequelize.define('related_ticket', schema.relatedTicket);
+Article.hasMany(RelatedTicket, {as: 'relatedTickets', onDelete: 'CASCADE', onUpdate: 'CASCADE'});
 //----server initialization----
 //server will overwrite defaults each time its launched
 sequelize.authenticate()
   .then(() => {
-    let updates = 0,
-    inserts = 0,
+    let conflicts = 0,
+    creations = 0,
     errors = 0,
     done = 0;
-    function loadCheck (a, err, inserted) {
-      err ? 
-        errors++ 
-        : inserted ? 
-          inserts++
-          : updates++;
-      ++done == a.length && console.log(chalk.green(`Load complete.`) + chalk.magenta(` ${done - errors} records loaded: ${inserts} insert${inserts != 1 ? 's' : ''}, ${updates} update${updates != 1 ? 's' : ''}.`) + (errors ? chalk.red(`\n${errors} error${errors != 1 ? 's' : ''}.`) : ''));
-    }
     console.log(chalk.green('Database connected.') + chalk.cyan('\nLoading default data...'));
-    Article.sync()
-    .then(()=> DEFAULT_DATA.forEach((jsonItem, i, a) => 
-      Article.upsert(jsonItem)
-        .then(inserted => loadCheck(a, null, inserted))
-        .catch(err => loadCheck(a, err)))
+    Article.sync({force: true})
+    .then(() => 
+      RelatedTicket.sync({force: true})
+      .then(()=> Promise.all(DEFAULT_DATA.map((jsonItem, i, a) => {
+        let tickets = [];
+        if(Array.isArray(jsonItem.relatedTickets)) {
+          tickets = jsonItem.relatedTickets.slice();
+          delete jsonItem.relatedTickets;
+        }
+        return Article.create(jsonItem)
+        .then(data => RelatedTicket.bulkCreate(tickets.map(ticketId => ({
+          articleId: data.id,
+          ticketId: ticketId,
+          id: `A${data.id}T${ticketId}`
+        })))
+      )})).then(loads => console.log(chalk.green(`Load complete. `) + chalk.magenta(`${loads.length} records loaded.`))))
     );
   })
   .catch(err => console.log(chalk.red(err.name + ' ' + err.message)));

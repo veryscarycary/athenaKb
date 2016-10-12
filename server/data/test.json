@@ -5,9 +5,13 @@
         "issue": "TXT",
         "solution": "TXT",
         "authorId": "STR",
-        "status": "active",
         "dateLastViewed": 1475695510863,
-        "viewCount": 2
+        "viewCount": 2, 
+        "relatedTickets": [
+          1,
+          2,
+          3
+        ]
     },
     {
         "title": "test1",
@@ -15,9 +19,14 @@
         "issue": "TXT",
         "solution": "TXT",
         "authorId": "STR",
-        "status": "active",
         "dateLastViewed": 1475695510863,
-        "viewCount": 2
+        "viewCount": 2, 
+        "relatedTickets": [
+          9,
+          2,
+          4,
+          3
+        ]
     },
     {
         "title": "test2",
@@ -25,9 +34,14 @@
         "issue": "TXT",
         "solution": "TXT",
         "authorId": "STR",
-        "status": "active",
         "dateLastViewed": 1475695510863,
-        "viewCount": 3
+        "viewCount": 3, 
+        "relatedTickets": [
+          1,
+          20,
+          3,
+          5
+        ]
     },
     {
         "title": "test3",
@@ -35,7 +49,6 @@
         "issue": "TXT",
         "solution": "TXT",
         "authorId": "STR",
-        "status": "active",
         "dateLastViewed": 1475695510863,
         "viewCount": 3
     }

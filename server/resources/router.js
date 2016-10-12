@@ -2,6 +2,9 @@
 const router = require('../config/middleware.js').router();
 const api = require('./controller.js');
 
+router.route('/metrics')
+  .get(api.getRelations);
+
 router.route('/api')
   .get(api.getArticle)
   .post(api.createArticle);

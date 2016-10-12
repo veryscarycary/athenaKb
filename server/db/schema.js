@@ -11,7 +11,8 @@ module.exports = {
   article: {
     title: {
       type: STR,
-      unique: true
+      unique: true,
+      required: true
     },
     id: {
       type: INT,
@@ -22,15 +23,22 @@ module.exports = {
     issuePreview: STR,
     issue: TXT,
     solution: TXT,
-    //relatedTickets: handle in join table
-    //relatedProducts: handle in join table , //Keys for product and versions
+    product: STR,
     authorId: STR,
     status: {
       type: ENUM,
-      values: ['active', 'checked out', 'archived']
+      values: ['active', 'checked out', 'archived'],
+      defaultValue: 'active'
     },
-    //datesEdited: [[String, String]], //dates edited, user Id HANDLE IN VER HISTORY
     dateLastViewed: DATE,
     viewCount: INT
+  }, 
+  relatedTicket: {
+    id: {
+      type: STR,
+      required:true,
+      primaryKey: true
+    },
+    ticketId: INT
   }
 };
