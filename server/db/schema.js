@@ -1,5 +1,5 @@
 'use strict'
-const Sequelize = require('../config/middleware.js').Sequelize,
+const Sequelize = require('../config/middleware.js').sequelize,
 STR = Sequelize.STRING, //varchar(255)
 BOOL = Sequelize.BOOLEAN, //tinyint(1)
 DATE = Sequelize.DATE, //Timestamp with time zone
@@ -11,7 +11,8 @@ module.exports = {
   article: {
     title: {
       type: STR,
-      unique: true
+      unique: true,
+      required: true
     },
     id: {
       type: INT,
@@ -22,12 +23,23 @@ module.exports = {
     issuePreview: STR,
     issue: TXT,
     solution: TXT,
-    //relatedTickets: handle in join table
-    //relatedProducts: handle in join table , //Keys for product and versions
+    product: STR,
     authorId: STR,
     archived: BOOL,
-    //datesEdited: [[String, String]], //dates edited, user Id HANDLE IN VER HISTORY
+    status: {
+      type: ENUM,
+      values: ['active', 'checked out', 'archived'],
+      defaultValue: 'active'
+    },
     dateLastViewed: DATE,
     viewCount: INT
+  },
+  relatedTicket: {
+    id: {
+      type: STR,
+      required:true,
+      primaryKey: true
+    },
+    ticketId: INT
   }
 };
