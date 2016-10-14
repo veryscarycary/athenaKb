@@ -25,20 +25,27 @@ module.exports = {
     solution: TXT,
     product: STR,
     authorId: STR,
-    archived: BOOL,
+    archived: {
+      type:BOOL,
+      defaultValue:false
+    },
     status: {
       type: ENUM,
       values: ['active', 'checked out', 'archived'],
       defaultValue: 'active'
     },
     dateLastViewed: DATE,
-    viewCount: INT,
+    viewCount: {
+      type: INT,
+      defaultValue: 1
+    },
     useCount: INT
   },
+
   relatedTicket: {
     id: {
       type: STR,
-      required:true,
+      required: true,
       primaryKey: true
     },
     ticketId: INT

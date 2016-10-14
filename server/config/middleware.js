@@ -8,6 +8,6 @@ module.exports = {
   router: express.Router,
   bodyParser: require('body-parser'),
   chalk: require('chalk'),
-  sequelize: require('sequelize'), 
+  sequelize: require('sequelize'),
   pg: require('pg')
 }
