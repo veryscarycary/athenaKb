@@ -19,6 +19,7 @@ module.exports = mongoose.model('Kb', new mongoose.Schema(
       dateSubmitted: String,
       dateLastViewed: String,
       viewCount: Number,
+      useCount: Number,
       checkedOut: Boolean
     },
     {  versionKey: false }

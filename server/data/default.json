@@ -4,6 +4,7 @@
     "checkedOut": true,
     "archived": true,
     "viewCount": 29,
+    "useCount": 4,
     "relatedProducts": [
       "computer"
     ],
@@ -46,6 +47,7 @@
     "checkedOut": true,
     "archived": false,
     "viewCount": 16,
+    "useCount": 2,
     "relatedProducts": [
       "computer"
     ],
@@ -75,6 +77,7 @@
     "checkedOut": true,
     "archived": true,
     "viewCount": 26,
+    "useCount": 5,
     "relatedProducts": [
       "computer"
     ],
@@ -118,6 +121,7 @@
     "checkedOut": true,
     "archived": false,
     "viewCount": 3,
+    "useCount": 0,
     "relatedProducts": [
       "computer"
     ],
@@ -156,6 +160,7 @@
     "checkedOut": false,
     "archived": false,
     "viewCount": 82,
+    "useCount": 21,
     "relatedProducts": [
       "internet"
     ],
