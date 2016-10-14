@@ -1,6 +1,5 @@
 [
   {
-    "id": "01",
     "archived": true,
     "viewCount": 29,
     "issuePreview": "How would you explain JavaScript closures?",
@@ -11,7 +10,6 @@
     "dateLastViewed": "2016-10-01T11:59:50"
   },
   {
-    "id": "02",
     "archived": false,
     "viewCount": 16,
     "issuePreview": "I have a Macbook Pro 13.3 only a few months old. When I use this, whether I use the word, web surfing etc then adjust the brightness of the screen itself from strong to weak and back",
@@ -22,7 +20,6 @@
     "dateLastViewed": "2015-08-08T09:54:52"
   },
   {
-    "id": "03",
     "archived": false,
     "viewCount": 26,
     "issuePreview": "I committed the wrong files to Git. How can I undo this commit?",
@@ -33,7 +30,6 @@
     "dateLastViewed": "2016-09-29T06:09:20"
   },
   {
-    "id": "04",
     "archived": false,
     "viewCount": 3,
     "issuePreview": "What does “use strict” do in JavaScript, and what is the reasoning behind it?",
@@ -44,7 +40,6 @@
     "dateLastViewed": "2016-09-30T06:32:13"
   },
   {
-    "id": "05",
     "archived": false,
     "viewCount": 82,
     "issuePreview": "Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. Where and what are they (physically in a real computer's memory)?",
