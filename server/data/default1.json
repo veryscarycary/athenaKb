@@ -1,0 +1,181 @@
+[
+  {
+    "id": "01",
+    "checkedOut": true,
+    "archived": true,
+    "viewCount": 29,
+    "relatedProducts": [
+      "javascript",
+      "programming"
+    ],
+    "relatedTickets": [
+      "01",
+      "04"
+    ],
+    "issuePreview": "How would you explain JavaScript closures?",
+    "issue": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
+    "solution": "Closures are a somewhat advanced, and often misunderstood feature of the JavaScript language. Simply put, closures are objects that contain a function and a reference to the environment in which the function was created. However, in order to fully understand closures, there are two other features of the JavaScript language that must first be understood―first-class functions and inner functions. First-Class Functions In programming languages, functions are considered to be first-class citizens if they can be manipulated like any other data type. For example, first-class functions can be constructed at runtime and assigned to variables. They can also be passed to, and returned by other functions. In addition to meeting the previously mentioned criteria, JavaScript functions also have their own properties and methods. The following example shows some of the capabilities of first-class functions. In the example, two functions are created and assigned to the variables 'foo' and 'bar'. The function stored in 'foo' displays a dialog box, while 'bar' simply returns whatever argument is passed to it. The last line of the example does several things. First, the function stored in 'bar' is called with 'foo' as its argument. 'bar' then returns the 'foo' function reference. Finally, the returned 'foo' reference is called, causing 'Hello World!' to be displayed.",
+    "authorId": "001",
+    "title": "How do JavaScript closures work?",
+    "datesEdited": [
+      [
+        "2015-05-15T08:26:01",
+        "001"
+      ],
+      [
+        "2015-05-20T08:26:01",
+        "001"
+      ],
+      [
+        "2015-05-21T08:26:01",
+        "002"
+      ],
+      [
+        "2016-01-12T08:26:01",
+        "001"
+      ],
+      [
+        "2016-09-30T03:14:24",
+        "002"
+      ]
+    ],
+    "dateSubmitted": "2015-03-02T12:52:25",
+    "dateLastViewed": "2016-11-01T11:59:50"
+  },
+  {
+    "id": "02",
+    "checkedOut": true,
+    "archived": false,
+    "viewCount": 16,
+    "relatedProducts": [
+      "computer"
+    ],
+    "relatedTickets": [
+      "03"
+    ],
+    "issuePreview": "tempor sint sunt culpa esse dolore eiusmod officia nulla dolore laboris dolor officia aliqua elit elit laboris mollit nisi non",
+    "issue": "Ut consequat cillum elit nisi consequat excepteur id nostrud ea irure dolor. Ipsum sunt laboris excepteur nostrud eu consequat nulla elit enim eiusmod commodo veniam laborum magna. Eiusmod aute velit aliquip voluptate ut do exercitation nulla fugiat. Nostrud commodo ex adipisicing officia Lorem exercitation id fugiat voluptate ex aute dolore ut nisi. Minim nostrud laboris sunt dolore deserunt aliquip minim exercitation laboris irure ipsum. Ullamco ipsum laborum nostrud nulla nostrud ea enim eu Lorem consectetur reprehenderit ullamco. Consectetur esse nisi sint Lorem culpa est sint qui.\r\nProident aute deserunt adipisicing elit aute ut sint laborum cillum pariatur. Elit ut elit aliquip deserunt officia ut cillum dolore esse ex. Tempor cillum nulla sunt eiusmod magna excepteur pariatur qui.\r\nAd tempor ut voluptate in mollit. Pariatur sint nostrud pariatur magna deserunt anim exercitation cillum culpa ad. Et id nostrud incididunt ex nostrud veniam officia pariatur id aute excepteur velit sint sit. Exercitation ea veniam cillum sit cupidatat et nisi anim ullamco. Qui quis consectetur cupidatat dolore minim Lorem minim anim.\r\nMagna cillum tempor mollit nulla irure enim occaecat fugiat do elit cupidatat exercitation occaecat nisi. Culpa ipsum labore velit irure nulla amet sit. Commodo esse ea pariatur ullamco adipisicing tempor sint. Nostrud nisi irure magna labore magna ad. Nisi sunt ullamco do labore esse adipisicing. Non in esse occaecat anim sunt exercitation in excepteur ad.\r\n",
+    "solution": "Minim deserunt minim ipsum officia quis deserunt elit labore tempor. Esse dolor do occaecat quis irure. Velit ipsum labore consequat laboris magna do aliquip elit duis sint sunt quis duis.\r\nNisi nulla occaecat officia est reprehenderit fugiat dolor magna dolore eiusmod consectetur reprehenderit. Occaecat velit incididunt voluptate ullamco dolore mollit. Id Lorem anim sint esse sunt sunt. Enim cupidatat aliqua dolore et culpa in excepteur amet voluptate labore.\r\nNisi tempor sint reprehenderit pariatur nostrud aliquip ullamco in. Occaecat veniam dolore duis nulla ad labore irure. Dolor velit sint esse non reprehenderit veniam pariatur. Est tempor velit occaecat quis ad nulla eiusmod ut occaecat. Deserunt irure pariatur mollit nisi id deserunt. Fugiat est reprehenderit id sit.\r\nUt aliqua veniam consectetur anim enim. Occaecat velit enim minim cillum magna qui velit. Eiusmod aliquip amet ullamco in veniam eiusmod officia ad eiusmod in magna aute in elit. Commodo et Lorem sunt cupidatat dolor consequat aute incididunt dolore reprehenderit Lorem incididunt nisi.\r\nEx aliqua quis magna excepteur ad officia deserunt qui exercitation laboris tempor enim cupidatat qui. Ad duis pariatur pariatur ex aliquip qui laborum esse irure. Sint amet laborum dolore ex aliquip excepteur cupidatat aute. Ad nostrud deserunt aute labore aliquip deserunt. Enim quis voluptate laboris sunt eiusmod consequat nulla exercitation incididunt dolor occaecat qui irure eu.\r\n",
+    "authorId": 1009,
+    "title": "Computer does does not turn on",
+    "datesEdited": [
+      [
+        "2014-03-23T12:07:48",
+        "1002a"
+      ],
+      [
+        "2014-03-23T12:07:48",
+        "1002a"
+      ]
+    ],
+    "dateSubmitted": "2015-01-07T02:52:59",
+    "dateLastViewed": "2015-08-08T09:54:52"
+  },
+  {
+    "id": "03",
+    "checkedOut": true,
+    "archived": true,
+    "viewCount": 26,
+    "relatedProducts": [
+      "computer"
+    ],
+    "relatedTickets": [
+      "05",
+      "03",
+      "02"
+    ],
+    "issuePreview": "dolor pariatur fugiat ex voluptate aliquip aliqua et amet cupidatat eiusmod excepteur ullamco cupidatat sint irure et aliqua exercitation sit",
+    "issue": "Est cillum cupidatat dolor dolor tempor ea. Deserunt irure pariatur tempor consectetur officia sunt ex sunt non. Cupidatat sit sunt consequat nulla laboris sunt excepteur consectetur anim ea ut. Eu dolor magna Lorem esse laboris esse fugiat.\r\nIn amet ad dolore aliqua eu qui. Ut sint sit aute magna in. Magna eiusmod id culpa pariatur nulla occaecat est. Eu deserunt dolore occaecat et non. Sit ipsum aliqua ullamco tempor. Duis ad sunt est laborum dolore amet duis elit elit ullamco quis irure.\r\nConsectetur consectetur pariatur sit do ad eiusmod. Veniam adipisicing elit sint do est. Quis tempor esse esse excepteur aliqua consequat enim aliquip. Anim id ea magna aute fugiat id minim ullamco esse minim aute incididunt. Laboris qui deserunt minim commodo irure minim culpa magna dolore et exercitation id proident. Ut elit id sint incididunt amet minim. Aute laboris duis veniam nostrud ad anim Lorem tempor ut.\r\nUt non amet adipisicing nisi reprehenderit tempor et sunt consectetur velit ullamco sint non. Minim ex culpa sint tempor nostrud sint minim anim. Laborum reprehenderit ad irure commodo mollit id. Quis aliquip culpa exercitation commodo ut culpa velit consequat ad dolore ut eiusmod voluptate do. Irure id aliquip ullamco do id.\r\n",
+    "solution": "Esse proident qui ullamco eu nisi anim laborum proident. Id excepteur in qui consequat irure. Pariatur culpa ad cillum cupidatat amet deserunt cupidatat.\r\nPariatur cupidatat officia veniam minim nisi tempor fugiat amet nostrud officia. Deserunt enim do ad sunt nulla aliqua magna laboris deserunt occaecat dolore incididunt. Deserunt sint dolore et sit sit consequat deserunt nulla. Duis ea eu dolore Lorem. Veniam magna mollit consectetur ipsum elit dolore reprehenderit enim et ullamco dolore qui pariatur commodo. Velit ipsum dolor dolor minim est adipisicing cillum irure et.\r\nEu aliqua ipsum magna labore enim. Anim excepteur cupidatat est anim dolore adipisicing qui Lorem ut sit. Duis dolor deserunt sit velit. Dolor sunt laborum ullamco elit aute est proident qui aute.\r\nIpsum consequat labore excepteur est amet voluptate esse do ullamco eiusmod ad reprehenderit eu. Cupidatat quis Lorem aliquip veniam minim magna id minim aute enim et occaecat eu veniam. Proident labore deserunt qui mollit ullamco tempor adipisicing velit officia quis. Fugiat pariatur cillum Lorem fugiat anim incididunt veniam minim et enim enim commodo tempor veniam. Occaecat esse voluptate do nisi officia magna tempor mollit tempor cillum commodo ea. Et pariatur qui in est sint adipisicing. Pariatur consectetur ipsum laboris aute cillum fugiat.\r\nAdipisicing ex pariatur dolore nulla excepteur consectetur consequat. Occaecat duis minim voluptate proident ut irure fugiat eu pariatur incididunt non anim. Occaecat qui voluptate enim occaecat. Adipisicing fugiat eiusmod reprehenderit aliquip fugiat labore. Officia fugiat proident dolore irure ullamco Lorem officia elit adipisicing esse adipisicing tempor officia. Sint commodo cupidatat enim qui dolor enim quis duis in occaecat ad non ad. Nostrud sunt duis ut duis adipisicing nulla esse dolor quis in est ut adipisicing irure.\r\n",
+    "authorId": 1008,
+    "title": "Computer shuts down randomly",
+    "datesEdited": [
+      [
+        "2014-08-25T02:31:30",
+        "1005a"
+      ],
+      [
+        "2014-08-25T02:31:30",
+        "1005a"
+      ],
+      [
+        "2014-08-25T02:31:30",
+        "1005a"
+      ],
+      [
+        "2014-08-25T02:31:30",
+        "1005a"
+      ],
+      [
+        "2014-08-25T02:31:30",
+        "1005a"
+      ]
+    ],
+    "dateSubmitted": "2014-02-07T12:17:58",
+    "dateLastViewed": "2016-06-20T06:09:20"
+  },
+  {
+    "id": "04",
+    "checkedOut": true,
+    "archived": false,
+    "viewCount": 3,
+    "relatedProducts": [
+      "computer"
+    ],
+    "relatedTickets": [
+      "04",
+      "05"
+    ],
+    "issuePreview": "dolore tempor dolore laboris irure exercitation esse commodo dolore quis magna irure irure in excepteur in aliqua magna labore sint",
+    "issue": "Nulla sit amet non mollit nulla incididunt ullamco officia. Lorem velit aliquip voluptate ut. Est ut fugiat dolore officia sint commodo laboris commodo exercitation incididunt aliquip enim. Dolor dolore tempor sint amet culpa nulla enim excepteur esse aliquip tempor fugiat non.\r\nId exercitation dolor mollit deserunt. Sint esse nostrud cupidatat elit officia. Nostrud commodo in non nisi officia ea cupidatat duis aliqua commodo. Laborum irure nisi ex quis ad veniam. Amet adipisicing exercitation quis esse officia cillum id sunt voluptate sit. Est nostrud pariatur enim ut cupidatat tempor ipsum et dolor aute esse nisi enim et.\r\nTempor exercitation enim esse veniam dolore duis consectetur magna aute culpa reprehenderit. Deserunt eiusmod laboris velit qui est dolor id. Reprehenderit adipisicing ad fugiat est. Veniam in ut labore commodo laborum sint pariatur aute non elit irure consequat. Cillum aute Lorem pariatur nisi. Dolore in sit mollit dolor pariatur ipsum aliqua.\r\nAute labore tempor sunt esse mollit adipisicing consequat veniam esse nisi velit. Culpa nostrud incididunt non ipsum et magna ex ullamco dolore irure aliquip ad. Culpa labore do reprehenderit qui consectetur aliqua. Duis dolor dolore anim dolore ex occaecat consequat in. Sunt sunt sint veniam culpa magna nulla laboris id adipisicing elit.\r\n",
+    "solution": "Velit amet aliqua do qui id Lorem irure excepteur ut aliqua proident occaecat in reprehenderit. Est veniam duis excepteur nostrud consequat sint reprehenderit irure consequat quis. Enim nisi aute minim in ut reprehenderit esse do qui. Incididunt velit officia proident voluptate ipsum excepteur reprehenderit magna.\r\nAnim exercitation proident laboris voluptate. Ipsum sunt mollit commodo labore aute nostrud est culpa voluptate adipisicing enim ut sit. Sint reprehenderit ipsum aliqua nisi non in esse laborum occaecat non velit. Magna in irure quis velit proident dolor. Occaecat elit est cillum ad. Pariatur ea sunt aliqua non.\r\nLaborum veniam incididunt est est irure nostrud officia ipsum reprehenderit veniam sunt nisi aliqua officia. Commodo sint fugiat ad dolor aute amet culpa occaecat labore fugiat nisi sint quis aliqua. Enim culpa aliqua amet mollit qui consequat nostrud eu fugiat commodo enim. Ipsum in laboris aute consequat. Magna tempor adipisicing dolore sunt.\r\nCulpa velit velit laboris eu consectetur. Velit irure nulla veniam quis qui tempor commodo velit aliquip. Labore qui mollit excepteur ea Lorem sint. Sit ut pariatur nulla ipsum ullamco do do cillum quis mollit occaecat.\r\nOfficia sit consectetur in non anim deserunt nostrud est anim. Consequat tempor culpa velit minim excepteur voluptate eiusmod qui culpa. Ex est veniam amet nulla esse quis laborum consectetur aute ex. Ut exercitation sunt ex excepteur magna. Amet nostrud cupidatat sint do laborum sunt irure sint occaecat id tempor tempor elit nostrud. In tempor dolor deserunt reprehenderit ex.\r\n",
+    "authorId": 1002,
+    "title": "Computer will not connect to internet",
+    "datesEdited": [
+      [
+        "2016-08-09T09:17:07",
+        "1006a"
+      ],
+      [
+        "2016-08-09T09:17:07",
+        "1006a"
+      ],
+      [
+        "2016-08-09T09:17:07",
+        "1006a"
+      ],
+      [
+        "2016-08-09T09:17:07",
+        "1006a"
+      ]
+    ],
+    "dateSubmitted": "2015-11-08T10:48:38",
+    "dateLastViewed": "2015-08-28T06:32:13"
+  },
+  {
+    "id": "05",
+    "checkedOut": false,
+    "archived": false,
+    "viewCount": 82,
+    "relatedProducts": [
+      "internet"
+    ],
+    "relatedTickets": [
+      "01",
+      "05"
+    ],
+    "issuePreview": "excepteur laborum eiusmod adipisicing proident id nostrud eiusmod cillum ullamco consectetur elit laboris eu minim qui aliquip occaecat incididunt consectetur",
+    "issue": "Nostrud et veniam sint quis do labore voluptate nisi eu cupidatat laborum Lorem. Aute dolor velit ea proident anim adipisicing amet esse elit. In in est non reprehenderit sit veniam minim consequat. Sunt aliquip pariatur commodo in. Est do aute sunt esse aliqua reprehenderit. Eu culpa anim ea anim officia magna consequat non ut culpa ipsum esse adipisicing sit.\r\nUt pariatur irure cillum sunt minim ea amet pariatur non sit est ipsum commodo quis. Deserunt quis occaecat pariatur sit tempor exercitation deserunt deserunt quis et elit. Proident culpa ut laborum fugiat amet consequat et anim. Aliqua non cupidatat non adipisicing. Commodo incididunt quis in exercitation.\r\nNon cillum voluptate velit pariatur exercitation consectetur esse ex sit cupidatat. Occaecat aute ad Lorem ipsum excepteur labore minim id. Voluptate velit nulla culpa adipisicing nisi sint ut ut tempor irure consequat in. Dolor reprehenderit esse pariatur do. Eiusmod non aliquip nisi cillum exercitation adipisicing cupidatat.\r\nIncididunt amet ut adipisicing nisi deserunt qui et sunt. Aliqua amet exercitation non incididunt est et officia nulla sunt. Cillum ipsum ullamco deserunt Lorem aliqua nostrud minim anim reprehenderit voluptate ea aliquip commodo. Duis quis ex enim aute quis. Ipsum sint veniam cupidatat minim commodo veniam officia proident quis irure.\r\n",
+    "solution": "Elit elit consectetur occaecat officia adipisicing ut laborum consequat laborum ullamco sint. Occaecat officia elit nisi enim in eiusmod non sint. Sunt sint fugiat aliquip pariatur duis esse elit voluptate eu sunt laboris sint duis. Esse voluptate cupidatat laborum id deserunt nulla deserunt do quis sit occaecat veniam cupidatat. Velit cupidatat minim non qui commodo adipisicing mollit adipisicing dolore non voluptate occaecat nostrud nisi. Sint labore in veniam Lorem aute voluptate velit.\r\nSunt nostrud culpa irure duis nisi pariatur aliqua. Sint minim est est elit ea ullamco veniam laboris voluptate in non aute aute. Cupidatat qui excepteur commodo laborum aliquip laborum eu magna labore incididunt irure dolor.\r\nConsequat fugiat qui ipsum esse eu et exercitation anim excepteur. Nulla labore do quis ex eiusmod magna minim. Culpa sit mollit sunt aliquip sunt. Consequat consequat dolore cupidatat deserunt aute. Ullamco cupidatat eiusmod dolore nisi ut anim amet. Laborum voluptate do cupidatat enim sint.\r\nSunt non in cillum anim officia cillum. Velit est adipisicing laboris ad ullamco incididunt aliqua consequat incididunt. Consequat dolore nulla labore et laboris ad cillum ipsum commodo exercitation minim fugiat. Cupidatat dolore incididunt esse ipsum aute proident deserunt ex. Deserunt cillum consectetur ad ipsum enim. Ad consectetur quis excepteur ex ut fugiat est sit occaecat mollit veniam.\r\nEiusmod ex commodo cupidatat nostrud. Commodo minim ut dolore ut reprehenderit excepteur labore do. Ipsum elit elit consequat magna incididunt ut minim elit ut et sint. Ex tempor consectetur incididunt amet duis irure fugiat veniam pariatur adipisicing eu laborum. Et ullamco voluptate labore et consequat culpa anim aute nostrud proident minim. Nulla anim aute in eu fugiat laboris incididunt.\r\n",
+    "authorId": 1004,
+    "title": "Internet connectivity issues",
+    "datesEdited": [
+      [
+        "2015-10-08T04:56:53",
+        "1006a"
+      ]
+    ],
+    "dateSubmitted": "2016-06-03T06:36:59",
+    "dateLastViewed": "2015-10-31T01:53:50"
+  }
+]
