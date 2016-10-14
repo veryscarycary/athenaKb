@@ -32,8 +32,9 @@ module.exports = {
       defaultValue: 'active'
     },
     dateLastViewed: DATE,
-    viewCount: INT
-  }, 
+    viewCount: INT,
+    useCount: INT
+  },
   relatedTicket: {
     id: {
       type: STR,
